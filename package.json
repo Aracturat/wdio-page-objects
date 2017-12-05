@@ -1,0 +1,23 @@
+{
+  "name": "wdio-page-objects",
+  "version": "0.0.1",
+  "description": "Simple page object pattern realization for WebdriverIO",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aracturat/wdio-page-objects.git"
+  },
+  "author": "Nikolay Dozmorov <ndozmorov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aracturat/wdio-page-objects/issues"
+  },
+  "homepage": "https://github.com/Aracturat/wdio-page-objects#readme",
+  "dependencies": {
+    "reflect-metadata": "^0.1.10",
+    "@types/webdriverio": "^4.8.6"
+  }
+}
