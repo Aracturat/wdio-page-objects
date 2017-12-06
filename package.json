@@ -1,6 +1,6 @@
 {
   "name": "wdio-page-objects",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple page object pattern realization for WebdriverIO",
   "main": "index.ts",
   "scripts": {

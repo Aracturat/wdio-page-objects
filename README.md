@@ -1,8 +1,8 @@
 # wdio-page-objects
 
-Simple page object library for WebdriverIO using Typescript decorators. 
+Simple page object library for [WebdriverIO](https://github.com/webdriverio/webdriverio) using Typescript decorators. 
 
-Inspired by [xenon](https://github.com/ten-eleven/xenon) library for protractor.
+Inspired by [xenon](https://github.com/ten-eleven/xenon) library for [protractor](https://github.com/angular/protractor).
 
 ## Installation
 
@@ -13,6 +13,9 @@ npm install wdio-page-objects
 ## Example
 ```ts
 
+import { PageComponent, PageElement, element, child, text } from 'wdio-page-objects';
+
+
 export class Row extends PageComponent {
 
     @element('.element')
@@ -22,7 +25,7 @@ export class Row extends PageComponent {
 
 export class List extends PageComponent {
 
-    @child(".row", Row)
+    @child(Row, ".row")
     public rows: Row[];
 }
 
@@ -31,17 +34,17 @@ export class Filter extends PageComponent {
     @text('.input')
     public input: string;
 
-    @selector('.filter')
+    @element('.filter')
     public filter: PageElement[]; 
     
 }
 
 export class Page extends PageComponent {
 
-    @child(".filter")
+    @child(Filter, ".filter")
     public filter: Filter;
 
-    @child(".list")
+    @child(List, ".list")
     public list: List;
     
 }
@@ -72,3 +75,5 @@ It is shortcut for WebdriverIO.Client
 ```ts 
 export declare type PageElement = WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>;
 ```
+
+To create embedded PageComponent use @child decorator. 
