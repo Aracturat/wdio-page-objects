@@ -1,8 +1,9 @@
 {
   "name": "wdio-page-objects",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple page object pattern realization for WebdriverIO",
-  "main": "index.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +20,9 @@
   "dependencies": {
     "reflect-metadata": "^0.1.10",
     "@types/webdriverio": "^4.8.6"
+  },
+  "devDependencies": {
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.2"
   }
 }

@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
-        "target": "es2015",
+        "declaration": true,
         "module": "commonjs",
+        "target": "es2016",
         "moduleResolution": "node",
-        "declaration": false,
         "noLib": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -13,6 +13,8 @@
         "noImplicitReturns": true,
         "noImplicitUseStrict": false,
         "noFallthroughCasesInSwitch": true,
+        "outDir": "lib",
+        "sourceMap": true,
         "typeRoots": [
             "./node_modules/@types",
             "./node_modules"
