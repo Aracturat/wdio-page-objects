@@ -6,7 +6,7 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "wdio ./test/wdio.conf.js",
-    "build": "npm run clean & npx tsc",
+    "build": "npm run clean & npx tsc -p ./",
     "clean": "npx rimraf lib"
   },
   "repository": {
