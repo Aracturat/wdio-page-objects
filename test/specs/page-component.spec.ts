@@ -15,22 +15,22 @@ describe('Inner PageComponent with child decorator', () => {
     });
 
 
-    it('should return correct inner PageElement', () => {
+    it('should return correct inner element', () => {
         expect(po.list.header.getText()).to.equal('Header');
     });
 
-    it('should return items count', () => {
+    it('should return components count', () => {
         expect(po.list.items.length).to.equal(3);
     });
 
-    it('should return correct items in forEach loop', () => {
+    it('should return correct components in forEach loop', () => {
         po.list.items.forEach((e, i) => {
             expect(e.header.getText()).to.equal(`Header ${i + 1}`);
             expect(e.text.getText()).to.equal(`Text ${i + 1}`);
         });
     });
 
-    it('should return correct items in for loop', () => {
+    it('should return correct components in for loop', () => {
         for (let i = 0; i < po.list.items.length; i++) {
             expect(po.list.items[i].header.getText()).to.equal(`Header ${i + 1}`);
             expect(po.list.items[i].text.getText()).to.equal(`Text ${i + 1}`);

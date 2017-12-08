@@ -6,7 +6,8 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "wdio ./test/wdio.conf.js",
-    "build": "tsc"
+    "build": "npm run clean & tsc",
+    "clean": "npx rimraf lib"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
     "express": "^4.16.2",
+    "rimraf": "^2.6.2",
     "ts-node": "^3.3.0",
     "typescript": "^2.6.2",
     "wdio-mocha-framework": "^0.5.11",
