@@ -2,4 +2,6 @@ language: node_js
 node_js:
   - "node"
 before_install:
+  - tsc -v
+  - npm install typescript@2.6.2 -g
   - npm run build
