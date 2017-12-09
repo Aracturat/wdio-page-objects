@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - "node"
 before_install:
-  - npx tsc -v
   - npm install typescript@2.6.2
 after_success: 
   - npm run coveralls

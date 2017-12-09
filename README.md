@@ -1,5 +1,8 @@
 # wdio-page-objects
 
+[![Build Status](https://travis-ci.org/Aracturat/wdio-page-objects.svg?branch=master)](https://travis-ci.org/Aracturat/wdio-page-objects) [![Coverage Status](https://coveralls.io/repos/github/Aracturat/wdio-page-objects/badge.svg?branch=master)](https://coveralls.io/github/Aracturat/wdio-page-objects?branch=master) [![npm version](http://img.shields.io/npm/v/wdio-page-objects.svg)](https://npmjs.org/package/wdio-page-objects)
+
+
 Simple page object library for [WebdriverIO](https://github.com/webdriverio/webdriverio) using Typescript decorators. 
 
 Inspired by [xenon](https://github.com/ten-eleven/xenon) library for [protractor](https://github.com/angular/protractor).

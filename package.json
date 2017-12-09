@@ -1,6 +1,6 @@
 {
   "name": "wdio-page-objects",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple page object pattern realization for WebdriverIO",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -8,7 +8,7 @@
     "test": "npx nyc wdio ./test/wdio.conf.js",
     "coveralls": "npx cat ./coverage/lcov.info | npx coveralls",
     "build": "npm run clean & npx tsc",
-    "clean": "npx rimraf lib"
+    "clean": "npx rimraf lib & npx rimraf coverage & npx rimraf .nyc_output"
   },
   "nyc": {
     "extension": [
