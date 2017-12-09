@@ -148,7 +148,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        compilers : ['ts:ts-node/register']
+        compilers : ['ts:ts-node/register'],
+        require: ['source-map-support/register']
     },
     //
     // =====

@@ -5,9 +5,28 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "wdio ./test/wdio.conf.js",
+    "test": "npx nyc wdio ./test/wdio.conf.js",
+    "coveralls": "npx cat ./coverage/lcov.info | npx coveralls",
     "build": "npm run clean & npx tsc",
     "clean": "npx rimraf lib"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "text-summary",
+      "html",
+      "lcovonly"
+    ],
+    "all": true
   },
   "repository": {
     "type": "git",
@@ -27,8 +46,11 @@
     "@types/chai": "^4.0.8",
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
     "express": "^4.16.2",
+    "nyc": "^11.3.0",
     "rimraf": "^2.6.2",
+    "source-map-support": "^0.5.0",
     "ts-node": "^3.3.0",
     "typescript": "^2.6.2",
     "wdio-mocha-framework": "^0.5.11",

@@ -1,4 +1,4 @@
-import { PageComponent, PageElement, element, child } from '../../lib';
+import { PageComponent, PageElement, element, child } from '../../src';
 
 export class ListItem extends PageComponent {
 

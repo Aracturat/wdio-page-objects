@@ -1,4 +1,4 @@
-import { PageComponent, PageElement, element } from '../../lib';
+import { PageComponent, PageElement, element } from '../../src';
 
 export class Page extends PageComponent {
 

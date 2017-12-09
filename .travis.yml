@@ -4,4 +4,5 @@ node_js:
 before_install:
   - npx tsc -v
   - npm install typescript@2.6.2
-  - npm run build
+after_success: 
+  - npm run coveralls
