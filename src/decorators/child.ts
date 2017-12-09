@@ -29,7 +29,7 @@ export function child<T extends PageComponent>(type: PageComponentClass<T>, sele
                             }
                         },
                         has(target, property: string) {
-                            if (isArrayIndex(property) || property === "length") {
+                            if (isArrayIndex(property)) {
                                 return true;
                             }
                             return Reflect.has(target, property);

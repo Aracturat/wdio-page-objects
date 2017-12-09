@@ -5,7 +5,7 @@ export function text(selector: string, index?: number): any {
 }
 
 export function byText(text: string, index?: number): any {
-    return element(`//*[.=${text}]`, index);
+    return element(`./*/*[text()='${text}']`, index);
 }
 
 export function byDataBind(dataBind: string, index?: number): any {
