@@ -60,7 +60,7 @@
     "nyc": "^11.3.0",
     "rimraf": "^2.6.2",
     "source-map-support": "^0.5.0",
-    "ts-node": "^3.3.0",
+    "ts-node": "^4.0.0",
     "typescript": "^2.6.2",
     "wdio-mocha-framework": "^0.5.11",
     "wdio-mochawesome-reporter": "^1.1.0",
