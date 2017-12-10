@@ -1,5 +1,7 @@
 # wdio-page-objects
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Aracturat/wdio-page-objects.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/Aracturat/wdio-page-objects.svg?branch=master)](https://travis-ci.org/Aracturat/wdio-page-objects) [![Coverage Status](https://coveralls.io/repos/github/Aracturat/wdio-page-objects/badge.svg?branch=master)](https://coveralls.io/github/Aracturat/wdio-page-objects?branch=master) [![npm version](http://img.shields.io/npm/v/wdio-page-objects.svg)](https://npmjs.org/package/wdio-page-objects)
 
 
