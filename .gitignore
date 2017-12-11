@@ -1,5 +1,4 @@
 node_modules/*
 test/results/*
-lib/*
 .nyc_output/*
 coverage/*
