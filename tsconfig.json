@@ -2,7 +2,7 @@
     "compilerOptions": {
         "declaration": true,
         "module": "commonjs",
-        "target": "es2016",
+        "target": "es5",
         "moduleResolution": "node",
         "noLib": false,
         "emitDecoratorMetadata": true,
@@ -24,6 +24,10 @@
             "webdriverio",
             "mocha",
             "chai"
+        ],
+        "lib": [
+            "dom",
+            "es2015"
         ]
     },
     "exclude": [

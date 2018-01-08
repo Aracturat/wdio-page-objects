@@ -1,6 +1,6 @@
 {
   "name": "wdio-page-objects",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Simple page object pattern realization for WebdriverIO",
   "keywords": [
     "e2e",
@@ -21,11 +21,11 @@
   },
   "nyc": {
     "extension": [
-      ".ts"
+      ".js"
     ],
     "include": [
-      "src/*.ts",
-      "src/**/*.ts"
+      "lib/*.js",
+      "lib/**/*.js"
     ],
     "exclude": [
       "**/*.d.ts"
@@ -48,22 +48,21 @@
   },
   "homepage": "https://github.com/Aracturat/wdio-page-objects#readme",
   "dependencies": {
-    "reflect-metadata": "^0.1.10",
-    "@types/webdriverio": "^4.8.6"
+    "@types/webdriverio": "^4.8.7",
+    "reflect-metadata": "^0.1.10"
   },
   "devDependencies": {
-    "@types/chai": "^4.0.8",
-    "@types/mocha": "^2.2.44",
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "express": "^4.16.2",
-    "nyc": "^11.3.0",
+    "nyc": "^11.4.1",
     "rimraf": "^2.6.2",
     "source-map-support": "^0.5.0",
-    "ts-node": "^3.3.0",
+    "ts-node": "^4.1.0",
     "typescript": "^2.6.2",
-    "wdio-mocha-framework": "^0.5.11",
-    "wdio-mochawesome-reporter": "^1.1.0",
+    "wdio-mocha-framework": "^0.5.12",
     "wdio-phantomjs-service": "^0.2.2",
     "wdio-selenium-standalone-service": "0.0.9",
     "wdio-spec-reporter": "^0.1.3",

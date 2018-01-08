@@ -40,13 +40,5 @@ export class PageComponent {
             return ret.$(this.config.selector);
         }
     }
-
-    public waitUntil(condition: (element: PageElement) => boolean, timeout: number = this.config.timeoutMs) {
-        if (this.parent) {
-            this.parent.waitUntil(condition, timeout);
-        }
-
-        this.browser.waitUntil(() => condition(this.value), timeout);
-    }
-
+    
 }

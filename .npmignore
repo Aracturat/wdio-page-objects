@@ -1,6 +1,8 @@
-node_modules
-lib
+src
+test
+.travis.yml
 test/results
 .nyc_output
 coverage
 *.log*
+tsconfig.json

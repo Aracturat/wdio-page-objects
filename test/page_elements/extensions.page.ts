@@ -1,4 +1,4 @@
-import { PageComponent, PageElement, byDataBind, byPlaceholder, byText, text } from '../../src';
+import { PageComponent, PageElement, byDataBind, byPlaceholder, byText, text } from '../../lib';
 
 export class Page extends PageComponent {
 

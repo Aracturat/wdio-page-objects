@@ -13,6 +13,12 @@ Inspired by [xenon](https://github.com/ten-eleven/xenon) library for [protractor
 npm install wdio-page-objects
 ```
 
+Also it is necessary to allow decorators in tsconfig.json:
+```js
+"experimentalDecorators": true,
+"emitDecoratorMetadata": true
+```
+
 ## Example
 ```ts
 
