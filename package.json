@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/Aracturat/wdio-page-objects#readme",
   "dependencies": {
-    "@types/webdriverio": "^4.10.1",
+    "@types/webdriverio": "^4.13.0",
     "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
