@@ -66,6 +66,6 @@
     "wdio-phantomjs-service": "^0.2.2",
     "wdio-selenium-standalone-service": "^0.0.10",
     "wdio-spec-reporter": "^0.1.4",
-    "webdriverio": "^4.12.0"
+    "webdriverio": "^5.0.0"
   }
 }
