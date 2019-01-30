@@ -1,6 +1,6 @@
-import * as WebdriverIO from 'webdriverio';
+/// <reference types="webdriverio"/>
 
-export declare type PageElement = WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>;
+export declare type PageElement = WebdriverIO.Element<void>;
 
 export class PageComponentConfig {
     public constructor(
@@ -12,7 +12,7 @@ export class PageComponentConfig {
 
 export interface PageComponentClass<T extends PageComponent> {
 
-    new(browser: WebdriverIO.Client<void>,
+    new(browser: WebDriver.Client<void> & WebdriverIO.Browser<void>,
         config: PageComponentConfig,
         parent: PageComponent): T
 }
@@ -20,7 +20,7 @@ export interface PageComponentClass<T extends PageComponent> {
 export class PageComponent {
 
     public constructor(
-        protected browser: WebdriverIO.Client<void>,
+        protected browser: WebDriver.Client<void> & WebdriverIO.Browser<void>,
         protected config: PageComponentConfig = new PageComponentConfig(),
         private parent: PageComponent = null
     ) { }

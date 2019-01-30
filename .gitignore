@@ -4,3 +4,4 @@ test/results
 .nyc_output
 coverage
 *.log*
+.ts-node

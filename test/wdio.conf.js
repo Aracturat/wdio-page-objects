@@ -16,7 +16,15 @@ exports.stopExpress = function() {
 }
 
 exports.config = {
-
+    //
+    // ====================
+    // Runner Configuration
+    // ====================
+    //
+    // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
+    // on a remote machine).
+    runner: 'local',
+    
     //
     // ==================
     // Specify Test Files
@@ -69,16 +77,8 @@ exports.config = {
     // ===================
     // Define all options that are relevant for the WebdriverIO instance here
     //
-    // By default WebdriverIO commands are executed in a synchronous way using
-    // the wdio-sync package. If you still want to run your tests in an async way
-    // e.g. using promises you can set the sync option to false.
-    sync: true,
-    //
-    // Level of logging verbosity: silent | verbose | command | data | result | error
+    // Level of logging verbosity: trace | debug | info | warn | error
     logLevel: 'silent',
-    //
-    // Enables colors for log output.
-    coloredLogs: true,
     //
     // Warns when a deprecated command is used
     deprecationWarnings: true,
@@ -86,9 +86,6 @@ exports.config = {
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
     bail: 0,
-    //
-    // Saves a screenshot to a given path if a command fails.
-    screenshotPath: './test/results/errorShots/',
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
@@ -106,33 +103,15 @@ exports.config = {
     // Default request retries count
     connectionRetryCount: 3,
     //
-    // Initialize the browser instance with a WebdriverIO plugin. The object should have the
-    // plugin name as key and the desired plugin options as properties. Make sure you have
-    // the plugin installed before running any tests. The following plugins are currently
-    // available:
-    // WebdriverCSS: https://github.com/webdriverio/webdrivercss
-    // WebdriverRTC: https://github.com/webdriverio/webdriverrtc
-    // Browserevent: https://github.com/webdriverio/browserevent
-    // plugins: {
-    //     webdrivercss: {
-    //         screenshotRoot: 'my-shots',
-    //         failedComparisonsRoot: 'diffs',
-    //         misMatchTolerance: 0.05,
-    //         screenWidth: [320,480,640,1024]
-    //     },
-    //     webdriverrtc: {},
-    //     browserevent: {}
-    // },
-    //
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone', 'phantomjs'],
+    services: ['selenium-standalone'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
-    // see also: http://webdriver.io/guide/testrunner/frameworks.html
+    // see also: https://webdriver.io/docs/frameworks.html
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
@@ -140,17 +119,22 @@ exports.config = {
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
-    // see also: http://webdriver.io/guide/reporters/dot.html
+    // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec'],
-
+    
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
+        timeout: 200000,
         compilers : ['ts:ts-node/register'],
         require: ['source-map-support/register']
     },
+
+    debug: true,
+
+    execArgv: ['--inspect=127.0.0.1:5859'],
     //
     // =====
     // Hooks
@@ -191,7 +175,7 @@ exports.config = {
      */
     // beforeCommand: function (commandName, args) {
     // },
-
+    
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
@@ -228,7 +212,7 @@ exports.config = {
      */
     // afterSuite: function (suite) {
     // },
-
+    
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {String} commandName hook command name
@@ -260,8 +244,16 @@ exports.config = {
      * @param {Object} exitCode 0 - success, 1 - fail
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
+     * @param {<Object>} results object containing test results
      */
     onComplete: function (exitCode, config, capabilities) {
         exports.stopExpress();
     }
+    /**
+    * Gets executed when a refresh happens.
+    * @param {String} oldSessionId session ID of the old session
+    * @param {String} newSessionId session ID of the new session
+    */
+    //onReload: function(oldSessionId, newSessionId) {
+    //}
 }

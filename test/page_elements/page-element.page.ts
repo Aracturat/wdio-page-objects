@@ -14,7 +14,7 @@ export class Page extends PageComponent {
     @element(".list .item", 0)
     public firstItemAsArray: PageElement[];
     
-    @element(".header", null, (e) => e.element('..'))
+    @element(".header", null, (e) => e.$('..'))
     public headerParent: PageElement;
 
 }
