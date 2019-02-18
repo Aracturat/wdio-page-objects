@@ -69,6 +69,6 @@
     "source-map-support": "^0.5.10",
     "ts-node": "^8.0.2",
     "typescript": "^3.2.4",
-    "webdriverio": "^5.4.8"
+    "webdriverio": "^5.4.18"
   }
 }
