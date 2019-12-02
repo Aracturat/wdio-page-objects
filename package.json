@@ -60,7 +60,7 @@
     "@wdio/mocha-framework": "^5.4.8",
     "@wdio/selenium-standalone-service": "^5.2.2",
     "@wdio/spec-reporter": "^5.4.3",
-    "@wdio/sync": "^5.4.6",
+    "@wdio/sync": "^5.16.11",
     "chai": "^4.2.0",
     "coveralls": "^3.0.2",
     "express": "^4.16.4",
