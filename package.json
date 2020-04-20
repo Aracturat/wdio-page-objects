@@ -67,7 +67,7 @@
     "nyc": "^13.1.0",
     "rimraf": "^2.6.3",
     "source-map-support": "^0.5.10",
-    "ts-node": "^8.0.2",
+    "ts-node": "^8.9.0",
     "typescript": "^3.2.4",
     "webdriverio": "^5.4.8"
   }
