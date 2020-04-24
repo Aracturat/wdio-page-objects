@@ -62,7 +62,7 @@
     "@wdio/spec-reporter": "^5.4.3",
     "@wdio/sync": "^5.4.6",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.2",
+    "coveralls": "^3.1.0",
     "express": "^4.16.4",
     "nyc": "^13.1.0",
     "rimraf": "^2.6.3",
